@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Inventory</title>
+    <script src="cookie.js"></script>
+    <script src="final.js" defer></script>
+    <style>
+        #pageTitle {
+            background-color: lightskyblue;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            padding-top: 5px;
+            font-size: larger;
+            font-weight: bolder;
+            border: 5px ridge gray
+        }
+        .floatRightCookies {
+            float: right;
+            display: none;
+            background-color: red;
+            width: 50%;
+            min-height: 410px;
+            position: absolute;
+            top: 65px;
+            right: 5px;
+            padding: 5px;
+            border: 3px ridge gray
+        }
+        .floatLeftLogin {
+            background-color: goldenrod ;
+            width: 45%;
+            min-height: 100px;
+            padding: 5px 0 0 5px;
+        }
+
+        .cookieEntry {
+            background-color: a;
+            width: 45%;
+            min-height: 300px;
+            padding: 15px 0 0 5px;
+            display: none;
+        }
+        .cookieInfo {
+            display: none;
+        }
+        .modifications {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="pageTitle">
+        <p>Cookie Calories!</p>
+        </div>
+    <div class = "floatLeftLogin">
+        <input class="usrName" type="text" name="username" placeholder="Username" required>
+        <input class = "passcode" type="password" name="password" placeholder="Password" required>
+        <button onclick="login()">Log In</button>
+        <p class="loginMessage"></p>
+        </div>
+    <div class = "cookieEntry">
+        <p>Enter the name of your cookie and the amount of calories it has!</p>
+        <input class="cookieFirstName" type="text" name="cookieStudentName" placeholder="Your Cookies Name" required>
+        <input class="cookieCalories" type="text" name="cookieCalories" placeholder="0" required>
+        <button onclick= "cookieCaloriesInstance()">Save</button>
+        </div>
+    <div class= "floatRightCookies">
+        <ol class = "cookieList">
+        
+        </ol>
+        <div class="modifications">
+            Change the number of calories
+        <p class="changeCalories">
+                Enter number on list 
+            <input class = "calorieNumber" type="text" name="calorieNumber" placeholder="Calorie Number" required>
+            <button onclick="getCookieData()">Obtain Data</button>
+        </p>
+        
+        <div class = "cookieInfo">
+        <p class = "cookieData"></p>
+        <p> New Amount of Calories
+            <input class = "newCalories" type="text" name="newCalories" placeholder="Calorie Number" required>
+            <button onclick="saveCookieData()">Save Data</button>
+            <button onclick="removeCookie()">Remove Data</button>
+
+        </div>
+        </div>
+
+</body>
+</html>
